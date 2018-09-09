@@ -7,9 +7,8 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/ru-rocker/gokit-playground/lorem"
-
 	"github.com/go-kit/kit/log"
+	"github.com/olesiapoz/microservicetutorial"
 	"golang.org/x/net/context"
 )
 
@@ -17,10 +16,10 @@ func main() {
 	ctx := context.Background()
 	errChan := make(chan error)
 
-	var svc lorem.Service
-	svc = lorem.LoremService{}
-	endpoint := lorem.Endpoints{
-		LoremEndpoint: lorem.MakeLoremEndpoint(svc),
+	var svc microservicetutorial.Service
+	svc = microservicetutorial.LoremService{}
+	endpoint := microservicetutorial.Endpoints{
+		LoremEndpoint: microservicetutorial.MakeLoremEndpoint(svc),
 	}
 
 	// Logging domain.
