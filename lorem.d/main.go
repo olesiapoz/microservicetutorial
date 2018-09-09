@@ -7,8 +7,9 @@ import (
 	"os/signal"
 	"syscall"
 
+	lorem "github.com/olesiapoz/microservicetutorial"
+
 	"github.com/go-kit/kit/log"
-	lorem "github.com/ru-rocker/gokit-playground/lorem"
 	"golang.org/x/net/context"
 )
 
