@@ -30,7 +30,7 @@ func main() {
 		logger = log.NewContext(logger).With("caller", log.DefaultCaller)
 	}
 
-	r := lorem.MakeHttpHandler(ctx, endpoint, logger)
+	r := microservicetutorial.MakeHttpHandler(ctx, endpoint, logger)
 
 	// HTTP transport
 	go func() {
